@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedEvac Pro™ - Professional Medical Emergency Response System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Professional Medical Header -->
+    <header class="medical-header">
+        <div class="header-content">
+            <div class="medical-branding">
+                <div class="logo-section">
+                    <div class="medical-logo">
+                        <svg width="48" height="48" viewBox="0 0 48 48" class="medical-cross">
+                            <rect x="18" y="8" width="12" height="32" fill="#2563eb"/>
+                            <rect x="8" y="18" width="32" height="12" fill="#2563eb"/>
+                        </svg>
+                    </div>
+                    <div class="system-info">
+                        <h1>MedEvac Pro™</h1>
+                        <p class="system-subtitle">Professional Medical Emergency Response System</p>
+                        <div class="certification-badges">
+                            <span class="cert-badge fda">FDA 510(k)</span>
+                            <span class="cert-badge ce">CE Mark</span>
+                            <span class="cert-badge iso">ISO 13485</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="facility-info">
+                <div class="facility-details">
+                    <h3>Metro Regional Medical Center</h3>
+                    <p>Level I Trauma Center • Joint Commission Accredited</p>
+                    <p>License: FL-MED-2024-0847</p>
+                </div>
+                <div class="compliance-status">
+                    <div class="compliance-item">
+                        <span class="status-dot hipaa"></span>
+                        <span>HIPAA Compliant</span>
+                    </div>
+                    <div class="compliance-item">
+                        <span class="status-dot active"></span>
+                        <span>System Active</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="emergency-controls">
+                <button class="btn btn--emergency" id="code-blue">
+                    <span class="medical-icon">🏥</span>
+                    Code Blue
+                </button>
+                <button class="btn btn--primary" id="dispatch-unit">
+                    <span class="medical-icon">🚁</span>
+                    Dispatch Unit
+                </button>
+                <button class="btn btn--secondary" id="physician-consult">
+                    <span class="medical-icon">👨‍⚕️</span>
+                    Physician Consult
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Professional Navigation -->
+    <nav class="medical-navigation">
+        <div class="nav-container">
+            <button class="nav-tab active" data-tab="incident-management">
+                <span class="nav-icon">🚨</span>Incident Management
+            </button>
+            <button class="nav-tab" data-tab="patient-monitoring">
+                <span class="nav-icon">📊</span>Patient Monitoring
+            </button>
+            <button class="nav-tab" data-tab="fleet-operations">
+                <span class="nav-icon">✈️</span>Fleet Operations
+            </button>
+            <button class="nav-tab" data-tab="medical-protocols">
+                <span class="nav-icon">📋</span>Medical Protocols
+            </button>
+            <button class="nav-tab" data-tab="compliance-reporting">
+                <span class="nav-icon">📈</span>Compliance & Reporting
+            </button>
+            <button class="nav-tab" data-tab="system-integration">
+                <span class="nav-icon">🔗</span>System Integration
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Incident Management Tab -->
+        <div class="tab-content active" id="incident-management">
+            <div class="medical-dashboard">
+                <!-- Active Incidents Panel -->
+                <div class="medical-panel priority-panel">
+                    <div class="panel-header">
+                        <h3><span class="panel-icon">🚨</span>Active Medical Incidents</h3>
+                        <div class="incident-summary">
+                            <span class="incident-count critical">1 Critical</span>
+                            <span class="incident-count urgent">1 Urgent</span>
+                            <span class="incident-count delayed">1 Delayed</span>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="incidents-list">
+                            <div class="incident-card esi-1">
+                                <div class="incident-header">
+                                    <div class="incident-id">INC-2025-0902-001</div>
+                                    <div class="esi-level">ESI Level 1</div>
+                                    <div class="incident-time">11:42</div>
+                                </div>
+                                <div class="incident-details">
+                                    <div class="primary-complaint">
+                                        <h4>Cardiac Arrest - Witnessed</h4>
+                                        <p>67 y/o Male • Downtown Financial District</p>
+                                        <p class="location">Biscayne Blvd & NE 2nd St</p>
+                                    </div>
+                                    <div class="vital-signs">
+                                        <div class="vitals-grid">
+                                            <div class="vital">HR: <span class="critical">0</span></div>
+                                            <div class="vital">BP: <span class="critical">0/0</span></div>
+                                            <div class="vital">SpO2: <span class="warning">85%</span></div>
+                                            <div class="vital">Status: <span class="cpr">CPR in Progress</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="response-info">
+                                        <div class="responding-units">
+                                            <span class="unit">RESCUE-01</span>
+                                            <span class="unit">MEDIC-15</span>
+                                        </div>
+                                        <div class="protocols">
+                                            <span class="protocol">ALS Cardiac Arrest</span>
+                                            <span class="protocol">ACLS Guidelines</span>
+                                        </div>
+                                        <div class="eta">ETA: <span class="time-critical">00:03:45</span></div>
+                                    </div>
+                                </div>
+                                <div class="incident-actions">
+                                    <button class="btn btn--critical">Medical Director</button>
+                                    <button class="btn btn--primary">View SOAP</button>
+                                    <button class="btn btn--secondary">Chain of Custody</button>
+                                </div>
+                            </div>
+
+                            <div class="incident-card esi-2">
+                                <div class="incident-header">
+                                    <div class="incident-id">INC-2025-0902-002</div>
+                                    <div class="esi-level">ESI Level 2</div>
+                                    <div class="incident-time">11:38</div>
+                                </div>
+                                <div class="incident-details">
+                                    <div class="primary-complaint">
+                                        <h4>Diabetic Emergency</h4>
+                                        <p>34 y/o Female • Altered Mental Status</p>
+                                        <p class="location">Sunset Medical Plaza</p>
+                                    </div>
+                                    <div class="vital-signs">
+                                        <div class="vitals-grid">
+                                            <div class="vital">HR: <span class="elevated">110</span></div>
+                                            <div class="vital">BP: <span class="low">98/62</span></div>
+                                            <div class="vital">Glucose: <span class="critical">45 mg/dL</span></div>
+                                            <div class="vital">SpO2: <span class="normal">98%</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="response-info">
+                                        <div class="responding-units">
+                                            <span class="unit">RESCUE-03</span>
+                                        </div>
+                                        <div class="protocols">
+                                            <span class="protocol">Hypoglycemia Protocol</span>
+                                            <span class="protocol">ALS Medical</span>
+                                        </div>
+                                        <div class="eta">On Scene - <span class="status-active">Treating</span></div>
+                                    </div>
+                                </div>
+                                <div class="incident-actions">
+                                    <button class="btn btn--warning">Standing Orders</button>
+                                    <button class="btn btn--primary">Update Vitals</button>
+                                    <button class="btn btn--secondary">Receiving Facility</button>
+                                </div>
+                            </div>
+
+                            <div class="incident-card esi-3">
+                                <div class="incident-header">
+                                    <div class="incident-id">INC-2025-0902-003</div>
+                                    <div class="esi-level">ESI Level 1</div>
+                                    <div class="incident-time">11:45</div>
+                                </div>
+                                <div class="incident-details">
+                                    <div class="primary-complaint">
+                                        <h4>Pediatric Anaphylaxis</h4>
+                                        <p>8 y/o Male • Severe Allergic Reaction</p>
+                                        <p class="location">Lincoln Elementary School</p>
+                                    </div>
+                                    <div class="vital-signs">
+                                        <div class="vitals-grid">
+                                            <div class="vital">HR: <span class="critical">140</span></div>
+                                            <div class="vital">BP: <span class="critical">80/45</span></div>
+                                            <div class="vital">RR: <span class="critical">32</span></div>
+                                            <div class="vital">SpO2: <span class="critical">88%</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="response-info">
+                                        <div class="responding-units">
+                                            <span class="unit">RESCUE-02</span>
+                                        </div>
+                                        <div class="protocols">
+                                            <span class="protocol">Pediatric Anaphylaxis</span>
+                                            <span class="protocol">Epinephrine Admin</span>
+                                        </div>
+                                        <div class="eta">ETA: <span class="time-critical">00:01:30</span></div>
+                                    </div>
+                                </div>
+                                <div class="incident-actions">
+                                    <button class="btn btn--critical">Pediatric Specialist</button>
+                                    <button class="btn btn--primary">EpiPen Protocol</button>
+                                    <button class="btn btn--secondary">Children's Hospital</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medical Command Center -->
+                <div class="medical-panel command-panel">
+                    <div class="panel-header">
+                        <h3><span class="panel-icon">🏥</span>Medical Command & Control</h3>
+                        <div class="command-status">
+                            <span class="medical-director">Dr. James Martinez, MD - On Duty</span>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="command-sections">
+                            <div class="medical-oversight">
+                                <h4>Medical Direction</h4>
+                                <div class="physician-grid">
+                                    <div class="physician-card active">
+                                        <div class="physician-info">
+                                            <div class="physician-name">Dr. James Martinez, MD</div>
+                                            <div class="physician-specialty">Emergency Medicine</div>
+                                            <div class="physician-license">FL-MD-45789</div>
+                                        </div>
+                                        <div class="physician-status">
+                                            <span class="status-badge on-duty">On Duty</span>
+                                            <span class="contact">Ext. 2501</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="physician-card">
+                                        <div class="physician-info">
+                                            <div class="physician-name">Dr. Sarah Chen, MD</div>
+                                            <div class="physician-specialty">Flight Medicine</div>
+                                            <div class="physician-license">FL-MD-67234</div>
+                                        </div>
+                                        <div class="physician-status">
+                                            <span class="status-badge available">Available</span>
+                                            <span class="contact">Ext. 2502</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="physician-card">
+                                        <div class="physician-info">
+                                            <div class="physician-name">Dr. Lisa Rodriguez, MD</div>
+                                            <div class="physician-specialty">Pediatric EM</div>
+                                            <div class="physician-license">FL-MD-78901</div>
+                                        </div>
+                                        <div class="physician-status">
+                                            <span class="status-badge on-call">On Call</span>
+                                            <span class="contact">Ext. 2503</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="protocol-management">
+                                <h4>Active Medical Protocols</h4>
+                                <div class="protocols-list">
+                                    <div class="protocol-item active">
+                                        <div class="protocol-name">ACLS - Advanced Cardiac Life Support</div>
+                                        <div class="protocol-status">Active - Cardiac Arrest Protocol</div>
+                                        <button class="btn btn--sm btn--primary">View Guidelines</button>
+                                    </div>
+                                    <div class="protocol-item">
+                                        <div class="protocol-name">Hypoglycemia Management</div>
+                                        <div class="protocol-status">Standing Orders Approved</div>
+                                        <button class="btn btn--sm btn--secondary">Review Orders</button>
+                                    </div>
+                                    <div class="protocol-item urgent">
+                                        <div class="protocol-name">Pediatric Anaphylaxis</div>
+                                        <div class="protocol-status">Specialist Consultation Required</div>
+                                        <button class="btn btn--sm btn--warning">Contact Specialist</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Operational Map -->
+                <div class="medical-panel map-panel">
+                    <div class="panel-header">
+                        <h3><span class="panel-icon">🗺️</span>Operational Coverage Map</h3>
+                        <div class="map-controls">
+                            <button class="btn btn--sm view-btn active" data-view="medical">Medical</button>
+                            <button class="btn btn--sm view-btn" data-view="traffic">Traffic</button>
+                            <button class="btn btn--sm view-btn" data-view="weather">Weather</button>
+                            <button class="btn btn--sm view-btn" data-view="facilities">Facilities</button>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="operational-map" id="medicalMap">
+                            <canvas class="map-canvas" id="mapCanvas" width="600" height="400"></canvas>
+                            
+                            <!-- Medical Units -->
+                            <div class="medical-units">
+                                <div class="unit deployed" style="top: 25%; left: 45%;" data-unit="RESCUE-01">
+                                    <div class="unit-icon">🚁</div>
+                                    <div class="unit-info">
+                                        <div class="unit-id">RESCUE-01</div>
+                                        <div class="unit-status">En Route - Cardiac</div>
+                                        <div class="unit-eta">ETA: 3:45</div>
+                                    </div>
+                                </div>
+
+                                <div class="unit on-scene" style="top: 60%; left: 35%;" data-unit="RESCUE-03">
+                                    <div class="unit-icon">🚁</div>
+                                    <div class="unit-info">
+                                        <div class="unit-id">RESCUE-03</div>
+                                        <div class="unit-status">On Scene - Diabetic</div>
+                                        <div class="unit-eta">Treating</div>
+                                    </div>
+                                </div>
+
+                                <div class="unit deploying" style="top: 75%; left: 20%;" data-unit="RESCUE-02">
+                                    <div class="unit-icon">🚁</div>
+                                    <div class="unit-info">
+                                        <div class="unit-id">RESCUE-02</div>
+                                        <div class="unit-status">Deploying - Pediatric</div>
+                                        <div class="unit-eta">ETA: 1:30</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Medical Facilities -->
+                            <div class="medical-facilities">
+                                <div class="facility hospital" style="top: 40%; left: 60%;">
+                                    <div class="facility-icon">🏥</div>
+                                    <div class="facility-label">Metro Regional ED</div>
+                                </div>
+
+                                <div class="facility hospital" style="top: 70%; left: 70%;">
+                                    <div class="facility-icon">👶</div>
+                                    <div class="facility-label">Children's Hospital</div>
+                                </div>
+
+                                <div class="facility clinic" style="top: 50%; left: 25%;">
+                                    <div class="facility-icon">🏥</div>
+                                    <div class="facility-label">Sunset Community</div>
+                                </div>
+                            </div>
+
+                            <!-- Incident Locations -->
+                            <div class="incident-markers">
+                                <div class="marker critical pulsing" style="top: 20%; left: 50%;">
+                                    <div class="marker-pulse"></div>
+                                    <div class="marker-icon">💔</div>
+                                    <div class="marker-label">Cardiac Arrest</div>
+                                </div>
+
+                                <div class="marker urgent" style="top: 55%; left: 30%;">
+                                    <div class="marker-icon">💉</div>
+                                    <div class="marker-label">Diabetic Emergency</div>
+                                </div>
+
+                                <div class="marker critical" style="top: 80%; left: 15%;">
+                                    <div class="marker-icon">🍼</div>
+                                    <div class="marker-label">Pediatric Anaphylaxis</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Patient Monitoring Tab -->
+        <div class="tab-content" id="patient-monitoring">
+            <div class="monitoring-dashboard">
+                <!-- Patient Vitals -->
+                <div class="medical-panel vitals-panel">
+                    <div class="panel-header">
+                        <h3><span class="panel-icon">💓</span>Patient Vital Signs Monitoring</h3>
+                        <div class="monitoring-controls">
+                            <span class="patients-monitored">3 Patients Active</span>
+                            <button class="btn btn--sm btn--primary">Medical Record Integration</button>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="patients-grid">
+                            <div class="patient-monitor critical">
+                                <div class="patient-header">
+                                    <div class="patient-id">PT-001 (INC-2025-0902-001)</div>
+                                    <div class="patient-demographics">Male, 67 years</div>
+                                    <div class="medical-history">History: HTN, CAD</div>
+                                </div>
+                                <div class="vitals-display">
+                                    <div class="vital-sign critical">
+                                        <div class="vital-label">Heart Rate</div>
+                                        <div class="vital-value">0 BPM</div>
+                                        <div class="vital-trend">Asystole</div>
+                                        <canvas class="vital-waveform" id="hr-canvas-1" width="200" height="60"></canvas>
+                                    </div>
+                                    <div class="vital-sign critical">
+                                        <div class="vital-label">Blood Pressure</div>
+                                        <div class="vital-value">0/0 mmHg</div>
+                                        <div class="vital-trend">No BP</div>
+                                    </div>
+                                    <div class="vital-sign warning">
+                                        <div class="vital-label">Oxygen Saturation</div>
+                                        <div class="vital-value">85%</div>
+                                        <div class="vital-trend">Hypoxic</div>
+                                    </div>
+                                </div>
+                                <div class="treatment-status">
+                                    <div class="treatment-active">CPR in Progress</div>
+                                    <div class="medications">Epinephrine 1mg IV pushed</div>
+                                    <div class="interventions">Advanced Airway Secured</div>
+                                </div>
+                            </div>
+
+                            <div class="patient-monitor urgent">
+                                <div class="patient-header">
+                                    <div class="patient-id">PT-002 (INC-2025-0902-002)</div>
+                                    <div class="patient-demographics">Female, 34 years</div>
+                                    <div class="medical-history">History: Type 1 DM</div>
+                                </div>
+                                <div class="vitals-display">
+                                    <div class="vital-sign elevated">
+                                        <div class="vital-label">Heart Rate</div>
+                                        <div class="vital-value">110 BPM</div>
+                                        <div class="vital-trend">Tachycardic</div>
+                                        <canvas class="vital-waveform" id="hr-canvas-2" width="200" height="60"></canvas>
+                                    </div>
+                                    <div class="vital-sign low">
+                                        <div class="vital-label">Blood Pressure</div>
+                                        <div class="vital-value">98/62 mmHg</div>
+                                        <div class="vital-trend">Hypotensive</div>
+                                    </div>
+                                    <div class="vital-sign critical">
+                                        <div class="vital-label">Blood Glucose</div>
+                                        <div class="vital-value">45 mg/dL</div>
+                                        <div class="vital-trend">Severe Hypoglycemia</div>
+                                    </div>
+                                </div>
+                                <div class="treatment-status">
+                                    <div class="treatment-active">D50 50ml IV administered</div>
+                                    <div class="medications">Glucagon 1mg IM standby</div>
+                                    <div class="response">Patient responding to treatment</div>
+                                </div>
+                            </div>
+
+                            <div class="patient-monitor critical">
+                                <div class="patient-header">
+                                    <div class="patient-id">PT-003 (INC-2025-0902-003)</div>
+                                    <div class="patient-demographics">Male, 8 years</div>
+                                    <div class="medical-history">Known peanut allergy</div>
+                                </div>
+                                <div class="vitals-display">
+                                    <div class="vital-sign critical">
+                                        <div class="vital-label">Heart Rate</div>
+                                        <div class="vital-value">140 BPM</div>
+                                        <div class="vital-trend">Pediatric Tachycardia</div>
+                                        <canvas class="vital-waveform" id="hr-canvas-3" width="200" height="60"></canvas>
+                                    </div>
+                                    <div class="vital-sign critical">
+                                        <div class="vital-label">Blood Pressure</div>
+                                        <div class="vital-value">80/45 mmHg</div>
+                                        <div class="vital-trend">Shock</div>
+                                    </div>
+                                    <div class="vital-sign critical">
+                                        <div class="vital-label">Respiratory Rate</div>
+                                        <div class="vital-value">32/min</div>
+                                        <div class="vital-trend">Tachypneic</div>
+                                    </div>
+                                </div>
+                                <div class="treatment-status">
+                                    <div class="treatment-active">Preparing EpiPen 0.15mg</div>
+                                    <div class="medications">Albuterol nebulizer ready</div>
+                                    <div class="response">Pediatric specialist consulted</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SOAP Notes -->
+                <div class="medical-panel soap-panel">
+                    <div class="panel-header">
+                        <h3><span class="panel-icon">📝</span>SOAP Documentation</h3>
+                        <div class="documentation-controls">
+                            <button class="btn btn--sm btn--primary">Auto-Generate SOAP</button>
+                            <button class="btn btn--sm btn--secondary">Medical Records</button>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="soap-interface">
+                            <div class="patient-selector">
+                                <label class="form-label">Select Patient:</label>
+                                <select class="form-control" id="soap-patient">
+                                    <option value="pt-001">PT-001 - 67M Cardiac Arrest</option>
+                                    <option value="pt-002">PT-002 - 34F Diabetic Emergency</option>
+                                    <option value="pt-003">PT-003 - 8M Anaphylaxis</option>
+                                </select>
+                            </div>
+                            
+                            <div class="soap-sections">
+                                <div class="soap-section">
+                                    <h4>Subjective</h4>
+                                    <textarea class="form-control" rows="3" placeholder="Patient complaints, history of present illness...">67-year-old male found unresponsive by bystanders. Witnessed collapse during business meeting. Bystander states patient clutched chest before collapse. No known medical history available on scene.</textarea>
+                                </div>
+                                
+                                <div class="soap-section">
+                                    <h4>Objective</h4>
+                                    <textarea class="form-control" rows="4" placeholder="Vital signs, physical exam findings...">Patient found in asystole. No pulse, no respirations. Bystander CPR in progress upon EMS arrival. Skin cyanotic and cool. Pupils fixed and dilated. No response to painful stimuli. ETCO2: 8 mmHg. 12-lead ECG shows asystole in all leads.</textarea>
+                                </div>
+                                
+                                <div class="soap-section">
+                                    <h4>Assessment</h4>
+                                    <textarea class="form-control" rows="2" placeholder="Clinical impression, differential diagnosis...">Cardiac arrest - likely ventricular fibrillation deteriorated to asystole. Probable myocardial infarction given witnessed chest pain and collapse.</textarea>
+                                </div>
+                                
+                                <div class="soap-section">
+                                    <h4>Plan</h4>
+                                    <textarea class="form-control" rows="3" placeholder="Treatment plan, medications, procedures...">Continue high-quality CPR per ACLS guidelines. Epinephrine 1mg IV every 3-5 minutes. Secured advanced airway with endotracheal tube. Transport to Level I Trauma Center with ongoing resuscitation.</textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="soap-actions">
+                                <button class="btn btn--primary">Save SOAP Note</button>
+                                <button class="btn btn--secondary">Send to EMR</button>
+                                <button class="btn btn--outline">Print Report</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fleet Operations Tab -->
+        <div class="tab-content" id="fleet-operations">
+            <div class="fleet-dashboard">
+                <!-- Fleet Status -->
+                <div class="medical-panel fleet-panel">
+                    <div class="panel-header">
+                        <h3><span class="panel-icon">🚁</span>Medical Drone Fleet Status</h3>
+                        <div class="fleet-metrics">
+                            <span class="metric">5 Total Units</span>
+                            <span class="metric">3 Operational</span>
+                            <span class="metric">92% Availability</span>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="fleet-grid">
+                            <div class="drone-unit deployed">
+                                <div class="unit-header">
+                                    <div class="unit-info">
+                                        <div class="unit-id">RESCUE-01</div>
+                                        <div class="unit-model">N847MR • MedEvac Pro X1</div>
+                                        <div class="pilot-info">Capt. Michael Thompson, ATP</div>
+                                    </div>
+                                    <div class="unit-status status-deployed">DEPLOYED</div>
+                                </div>
+                                <div class="unit-metrics">
+                                    <div class="metric-row">
+                                        <div class="metric">
+                                            <span class="label">Battery</span>
+                                            <div class="battery-indicator">
+                                                <div class="battery-level" style="width: 78%"></div>
+                                                <span class="battery-text">78%</span>
+                                            </div>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="label">Flight Time Remaining</span>
+                                            <span class="value">23:45</span>
+                                        </div>
+                                    </div>
+                                    <div class="metric-row">
+                                        <div class="metric">
+                                            <span class="label">Altitude</span>
+                                            <span class="value">150 ft AGL</span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="label">Speed</span>
+                                            <span class="value">45 kt</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="medical-kit">
+                                    <div class="kit-label">Medical Payload:</div>
+                                    <div class="kit-contents">Advanced Cardiac Life Support Kit</div>
+                                </div>
+                                <div class="compliance-info">
+                                    <div class="cert-item">✓ FAA Part 107 Current</div>
+                                    <div class="cert-item">✓ BVLOS Authorization Active</div>
+                                    <div class="cert-item">✓ Last Maintenance: 2025-08-28</div>
+                                </div>
+                            </div>
+
+                            <div class="drone-unit en-route">
+                                <div class="unit-header">
+                                    <div class="unit-info">
+                                        <div class="unit-id">RESCUE-02</div>
+                                        <div class="unit-model">N849MR • MedEvac Pro X1</div>
+                                        <div class="pilot-info">Capt. Jennifer Davis, ATP</div>
+                                    </div>
+                                    <div class="unit-status status-en-route">EN ROUTE</div>
+                                </div>
+                                <div class="unit-metrics">
+                                    <div class="metric-row">
+                                        <div class="metric">
+                                            <span class="label">Battery</span>
+                                            <div class="battery-indicator">
+                                                <div class="battery-level" style="width: 94%"></div>
+                                                <span class="battery-text">94%</span>
+                                            </div>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="label">ETA to Target</span>
+                                            <span class="value time-critical">01:30</span>
+                                        </div>
+                                    </div>
+                                    <div class="metric-row">
+                                        <div class="metric">
+                                            <span class="label">Altitude</span>
+                                            <span class="value">120 ft AGL</span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="label">Speed</span>
+                                            <span class="value">52 kt</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="medical-kit">
+                                    <div class="kit-label">Medical Payload:</div>
+                                    <div class="kit-contents">Pediatric Advanced Life Support Kit</div>
+                                </div>
+                                <div class="compliance-info">
+                                    <div class="cert-item">✓ FAA Part 107 Current</div>
+                                    <div class="cert-item">✓ BVLOS Authorization Active</div>
+                                    <div class="cert-item">✓ Last Maintenance: 2025-08-30</div>
+                                </div>
+                            </div>
+
+                            <div class="drone-unit on-scene">
+                                <div class="unit-header">
+                                    <div class="unit-info">
+                                        <div class="unit-id">RESCUE-03</div>
+                                        <div class="unit-model">N851MR • MedEvac Pro X1</div>
+                                        <div class="pilot-info">Capt. Robert Kim, ATP</div>
+                                    </div>
+                                    <div class="unit-status status-on-scene">ON SCENE</div>
+                                </div>
+                                <div class="unit-metrics">
+                                    <div class="metric-row">
+                                        <div class="metric">
+                                            <span class="label">Battery</span>
+                                            <div class="battery-indicator">
+                                                <div class="battery-level" style="width: 89%"></div>
+                                                <span class="battery-text">89%</span>
+                                            </div>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="label">On Scene Time</span>
+                                            <span class="value">00:12:34</span>
+                                        </div>
+                                    </div>
+                                    <div class="metric-row">
+                                        <div class="metric">
+                                            <span class="label">Status</span>
+                                            <span class="value">Medical Treatment</span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="label">Patient Contact</span>
+                                            <span class="value">Active</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="medical-kit">
+                                    <div class="kit-label">Medical Payload:</div>
+                                    <div class="kit-contents">Advanced Life Support Medical Kit</div>
+                                </div>
+                                <div class="compliance-info">
+                                    <div class="cert-item">✓ FAA Part 107 Current</div>
+                                    <div class="cert-item">✓ BVLOS Authorization Active</div>
+                                    <div class="cert-item">✓ Last Maintenance: 2025-09-01</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quality Metrics -->
+                <div class="medical-panel metrics-panel">
+                    <div class="panel-header">
+                        <h3><span class="panel-icon">📊</span>Operational Quality Metrics</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="metrics-grid">
+                            <div class="metric-card response-time">
+                                <div class="metric-header">
+                                    <div class="metric-title">Response Times</div>
+                                    <div class="metric-status">Meeting Targets</div>
+                                </div>
+                                <div class="metric-values">
+                                    <div class="primary-metric">
+                                        <span class="value">06:32</span>
+                                        <span class="label">Current Average</span>
+                                    </div>
+                                    <div class="secondary-metrics">
+                                        <div class="secondary-metric">
+                                            <span class="value">08:00</span>
+                                            <span class="label">Target</span>
+                                        </div>
+                                        <div class="secondary-metric">
+                                            <span class="value">04:12</span>
+                                            <span class="label">Best Today</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="metric-chart">
+                                    <canvas id="responseTimeChart" width="200" height="80"></canvas>
+                                </div>
+                            </div>
+
+                            <div class="metric-card patient-outcomes">
+                                <div class="metric-header">
+                                    <div class="metric-title">Patient Outcomes</div>
+                                    <div class="metric-status">Excellent Performance</div>
+                                </div>
+                                <div class="metric-values">
+                                    <div class="outcome-grid">
+                                        <div class="outcome-item">
+                                            <span class="count">47</span>
+                                            <span class="label">Successful Transports</span>
+                                        </div>
+                                        <div class="outcome-item">
+                                            <span class="count">8</span>
+                                            <span class="label">Critical Saves</span>
+                                        </div>
+                                        <div class="outcome-item">
+                                            <span class="rating">4.9/5</span>
+                                            <span class="label">Patient Satisfaction</span>
+                                        </div>
+                                        <div class="outcome-item">
+                                            <span class="count">156</span>
+                                            <span class="label">Zero Incident Days</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="metric-card compliance">
+                                <div class="metric-header">
+                                    <div class="metric-title">Regulatory Compliance</div>
+                                    <div class="metric-status">100% Compliant</div>
+                                </div>
+                                <div class="compliance-items">
+                                    <div class="compliance-item">
+                                        <div class="compliance-check">✓</div>
+                                        <div class="compliance-detail">
+                                            <div class="compliance-name">FDA 510(k) Clearance</div>
+                                            <div class="compliance-status">K2024-0847 - Active</div>
+                                        </div>
+                                    </div>
+                                    <div class="compliance-item">
+                                        <div class="compliance-check">✓</div>
+                                        <div class="compliance-detail">
+                                            <div class="compliance-name">HIPAA Compliance</div>
+                                            <div class="compliance-status">Last Audit: 2025-08-15</div>
+                                        </div>
+                                    </div>
+                                    <div class="compliance-item">
+                                        <div class="compliance-check">✓</div>
+                                        <div class="compliance-detail">
+                                            <div class="compliance-name">Joint Commission</div>
+                                            <div class="compliance-status">Accredited - Expires 2027-03-15</div>
+                                        </div>
+                                    </div>
+                                    <div class="compliance-item">
+                                        <div class="compliance-check">✓</div>
+                                        <div class="compliance-detail">
+                                            <div class="compliance-name">ISO 13485 QMS</div>
+                                            <div class="compliance-status">Certified - Expires 2026-12-01</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Medical Protocols Tab -->
+        <div class="tab-content" id="medical-protocols">
+            <div class="protocols-dashboard">
+                <!-- Clinical Protocols -->
+                <div class="medical-panel protocols-panel">
+                    <div class="panel-header">
+                        <h3><span class="panel-icon">📋</span>Clinical Treatment Protocols</h3>
+                        <div class="protocol-controls">
+                            <button class="btn btn--primary">Update Protocols</button>
+                            <button class="btn btn--secondary">Medical Director Approval</button>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="protocols-grid">
+                            <div class="protocol-category">
+                                <h4>Cardiac Protocols</h4>
+                                <div class="protocol-list">
+                                    <div class="protocol-item active">
+                                        <div class="protocol-header">
+                                            <div class="protocol-name">Advanced Cardiac Life Support (ACLS)</div>
+                                            <div class="protocol-status approved">MD Approved</div>
+                                        </div>
+                                        <div class="protocol-details">
+                                            <div class="indications">Indications: Cardiac arrest, ventricular fibrillation, pulseless ventricular tachycardia</div>
+                                            <div class="contraindications">Contraindications: Terminal illness with DNR orders</div>
+                                            <div class="medications">
+                                                <strong>Medications:</strong>
+                                                <ul>
+                                                    <li>Epinephrine 1mg IV/IO every 3-5 minutes</li>
+                                                    <li>Amiodarone 300mg IV/IO for refractory VF/VT</li>
+                                                    <li>Atropine 1mg IV/IO for bradycardia (if applicable)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="protocol-actions">
+                                            <button class="btn btn--sm btn--primary">View Full Protocol</button>
+                                            <button class="btn btn--sm btn--secondary">Standing Orders</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="protocol-item">
+                                        <div class="protocol-header">
+                                            <div class="protocol-name">Acute Myocardial Infarction</div>
+                                            <div class="protocol-status approved">MD Approved</div>
+                                        </div>
+                                        <div class="protocol-details">
+                                            <div class="indications">Indications: Chest pain with STEMI criteria, elevated troponin</div>
+                                            <div class="medications">
+                                                <strong>Medications:</strong> Aspirin 324mg PO, Nitroglycerin 0.4mg SL, Morphine 2-4mg IV PRN
+                                            </div>
+                                        </div>
+                                        <div class="protocol-actions">
+                                            <button class="btn btn--sm btn--primary">View Protocol</button>
+                                            <button class="btn btn--sm btn--secondary">12-Lead ECG Guidelines</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="protocol-category">
+                                <h4>Endocrine Protocols</h4>
+                                <div class="protocol-list">
+                                    <div class="protocol-item active">
+                                        <div class="protocol-header">
+                                            <div class="protocol-name">Hypoglycemia Management</div>
+                                            <div class="protocol-status approved">MD Approved</div>
+                                        </div>
+                                        <div class="protocol-details">
+                                            <div class="indications">Indications: Blood glucose <60 mg/dL with altered mental status</div>
+                                            <div class="medications">
+                                                <strong>Standing Orders:</strong>
+                                                <ul>
+                                                    <li>D50 25-50ml IV push (if IV access available)</li>
+                                                    <li>Glucagon 1mg IM/IN (if no IV access)</li>
+                                                    <li>Recheck BGL in 10-15 minutes</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="protocol-actions">
+                                            <button class="btn btn--sm btn--primary">Execute Standing Orders</button>
+                                            <button class="btn btn--sm btn--secondary">Blood Glucose Log</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="protocol-category">
+                                <h4>Pediatric Protocols</h4>
+                                <div class="protocol-list">
+                                    <div class="protocol-item urgent">
+                                        <div class="protocol-header">
+                                            <div class="protocol-name">Pediatric Anaphylaxis</div>
+                                            <div class="protocol-status specialist">Specialist Required</div>
+                                        </div>
+                                        <div class="protocol-details">
+                                            <div class="indications">Indications: Severe allergic reaction with respiratory distress or shock</div>
+                                            <div class="medications">
+                                                <strong>Weight-Based Dosing:</strong>
+                                                <ul>
+                                                    <li>Epinephrine: 0.01mg/kg IM (max 0.3mg) or EpiPen Jr. 0.15mg</li>
+                                                    <li>Albuterol: 2.5mg nebulized</li>
+                                                    <li>Diphenhydramine: 1mg/kg IV/IM (max 50mg)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="protocol-actions">
+                                            <button class="btn btn--sm btn--critical">Pediatric Specialist Consult</button>
+                                            <button class="btn btn--sm btn--primary">Weight-Based Calculator</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chain of Custody -->
+                <div class="medical-panel custody-panel">
+                    <div class="panel-header">
+                        <h3><span class="panel-icon">🔗</span>Chain of Custody & Documentation</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="custody-tracker">
+                            <div class="custody-item">
+                                <div class="custody-header">
+                                    <div class="item-id">Incident: INC-2025-0902-001</div>
+                                    <div class="custody-status">Active Chain</div>
+                                </div>
+                                <div class="custody-timeline">
+                                    <div class="custody-step completed">
+                                        <div class="step-time">11:42</div>
+                                        <div class="step-action">Emergency call received - 911 Dispatch</div>
+                                        <div class="step-person">Dispatcher: J. Smith #1247</div>
+                                    </div>
+                                    <div class="custody-step completed">
+                                        <div class="step-time">11:43</div>
+                                        <div class="step-action">Medical direction contacted</div>
+                                        <div class="step-person">Dr. Martinez - Medical Director</div>
+                                    </div>
+                                    <div class="custody-step active">
+                                        <div class="step-time">11:45</div>
+                                        <div class="step-action">Unit RESCUE-01 dispatched with ACLS kit</div>
+                                        <div class="step-person">Capt. Thompson, Paramedic Anderson</div>
+                                    </div>
+                                    <div class="custody-step pending">
+                                        <div class="step-time">ETA</div>
+                                        <div class="step-action">Patient contact and assessment</div>
+                                        <div class="step-person">Field medical team</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compliance & Reporting Tab -->
+        <div class="tab-content" id="compliance-reporting">
+            <div class="compliance-dashboard">
+                <!-- Regulatory Compliance -->
+                <div class="medical-panel compliance-panel">
+                    <div class="panel-header">
+                        <h3><span class="panel-icon">✅</span>Regulatory Compliance Dashboard</h3>
+                        <div class="compliance-score">
+                            <span class="score">98%</span>
+                            <span class="label">Compliance Score</span>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="compliance-sections">
+                            <div class="compliance-section">
+                                <h4>Medical Device Regulations</h4>
+                                <div class="compliance-items">
+                                    <div class="compliance-item compliant">
+                                        <div class="compliance-icon">✓</div>
+                                        <div class="compliance-detail">
+                                            <div class="compliance-name">FDA 510(k) Clearance</div>
+                                            <div class="compliance-info">K2024-0847 • Class II Medical Device</div>
+                                            <div class="compliance-status">Valid through 2027-03-15</div>
+                                        </div>
+                                        <div class="compliance-actions">
+                                            <button class="btn btn--sm btn--outline">View Certificate</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="compliance-item compliant">
+                                        <div class="compliance-icon">✓</div>
+                                        <div class="compliance-detail">
+                                            <div class="compliance-name">CE Marking (EU MDR)</div>
+                                            <div class="compliance-info">CE-2024-MED-0847 • Class IIb Device</div>
+                                            <div class="compliance-status">Notified Body: BSI Group</div>
+                                        </div>
+                                        <div class="compliance-actions">
+                                            <button class="btn btn--sm btn--outline">EU Declaration</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="compliance-item compliant">
+                                        <div class="compliance-icon">✓</div>
+                                        <div class="compliance-detail">
+                                            <div class="compliance-name">ISO 13485:2016 QMS</div>
+                                            <div class="compliance-info">Quality Management System</div>
+                                            <div class="compliance-status">Certified through 2026-12-01</div>
+                                        </div>
+                                        <div class="compliance-actions">
+                                            <button class="btn btn--sm btn--outline">QMS Documentation</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="compliance-section">
+                                <h4>Healthcare Privacy & Security</h4>
+                                <div class="compliance-items">
+                                    <div class="compliance-item compliant">
+                                        <div class="compliance-icon">✓</div>
+                                        <div class="compliance-detail">
+                                            <div class="compliance-name">HIPAA Compliance</div>
+                                            <div class="compliance-info">Administrative, Physical, and Technical Safeguards</div>
+                                            <div class="compliance-status">Last audit: 2025-08-15 • Next: 2026-08-15</div>
+                                        </div>
+                                        <div class="compliance-actions">
+                                            <button class="btn btn--sm btn--outline">Audit Report</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="compliance-item compliant">
+                                        <div class="compliance-icon">✓</div>
+                                        <div class="compliance-detail">
+                                            <div class="compliance-name">Healthcare Data Encryption</div>
+                                            <div class="compliance-info">AES-256 End-to-End Encryption</div>
+                                            <div class="compliance-status">All patient data encrypted in transit and at rest</div>
+                                        </div>
+                                        <div class="compliance-actions">
+                                            <button class="btn btn--sm btn--outline">Security Policy</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="compliance-section">
+                                <h4>Aviation & Operations</h4>
+                                <div class="compliance-items">
+                                    <div class="compliance-item compliant">
+                                        <div class="compliance-icon">✓</div>
+                                        <div class="compliance-detail">
+                                            <div class="compliance-name">FAA Part 107 Operations</div>
+                                            <div class="compliance-info">Beyond Visual Line of Sight (BVLOS) Waiver</div>
+                                            <div class="compliance-status">Authorization: FL-BVLOS-2024-001</div>
+                                        </div>
+                                        <div class="compliance-actions">
+                                            <button class="btn btn--sm btn--outline">Waiver Document</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="compliance-item warning">
+                                        <div class="compliance-icon">⚠</div>
+                                        <div class="compliance-detail">
+                                            <div class="compliance-name">Pilot Currency Requirements</div>
+                                            <div class="compliance-info">Commercial Pilot Certification</div>
+                                            <div class="compliance-status">2 pilots require recency training within 30 days</div>
+                                        </div>
+                                        <div class="compliance-actions">
+                                            <button class="btn btn--sm btn--warning">Schedule Training</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quality Assurance Reporting -->
+                <div class="medical-panel qa-panel">
+                    <div class="panel-header">
+                        <h3><span class="panel-icon">📊</span>Quality Assurance & Performance Metrics</h3>
+                        <div class="qa-controls">
+                            <select class="form-control">
+                                <option>Last 30 Days</option>
+                                <option>Last Quarter</option>
+                                <option>Year to Date</option>
+                            </select>
+                            <button class="btn btn--primary">Generate Report</button>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="qa-metrics">
+                            <div class="qa-section">
+                                <h4>Patient Safety Metrics</h4>
+                                <div class="safety-metrics">
+                                    <div class="safety-metric">
+                                        <div class="metric-value">0</div>
+                                        <div class="metric-label">Adverse Events</div>
+                                        <div class="metric-trend positive">30-day streak</div>
+                                    </div>
+                                    <div class="safety-metric">
+                                        <div class="metric-value">100%</div>
+                                        <div class="metric-label">Protocol Compliance</div>
+                                        <div class="metric-trend stable">Maintained</div>
+                                    </div>
+                                    <div class="safety-metric">
+                                        <div class="metric-value">4.9/5</div>
+                                        <div class="metric-label">Patient Satisfaction</div>
+                                        <div class="metric-trend positive">↑ 0.2</div>
+                                    </div>
+                                    <div class="safety-metric">
+                                        <div class="metric-value">97.2%</div>
+                                        <div class="metric-label">Successful Outcomes</div>
+                                        <div class="metric-trend positive">↑ 1.5%</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="qa-section">
+                                <h4>Operational Performance</h4>
+                                <div class="performance-chart">
+                                    <canvas id="qaPerformanceChart" width="400" height="200"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Incident Reporting -->
+                <div class="medical-panel incident-reporting-panel">
+                    <div class="panel-header">
+                        <h3><span class="panel-icon">📝</span>Incident Reporting & Documentation</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="reporting-interface">
+                            <div class="report-type-selector">
+                                <label class="form-label">Report Type:</label>
+                                <select class="form-control">
+                                    <option>FDA MAUDE Report</option>
+                                    <option>State EMS Report</option>
+                                    <option>Joint Commission Event</option>
+                                    <option>Internal Quality Review</option>
+                                </select>
+                            </div>
+
+                            <div class="report-form">
+                                <div class="form-section">
+                                    <h5>Event Information</h5>
+                                    <div class="form-grid">
+                                        <div class="form-group">
+                                            <label class="form-label">Event Date/Time:</label>
+                                            <input type="datetime-local" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Event Classification:</label>
+                                            <select class="form-control">
+                                                <option>Equipment Malfunction</option>
+                                                <option>Medical Device Issue</option>
+                                                <option>Protocol Deviation</option>
+                                                <option>Communication Error</option>
+                                                <option>Near Miss</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-section">
+                                    <h5>Event Description</h5>
+                                    <textarea class="form-control" rows="4" placeholder="Detailed description of the event, contributing factors, and immediate actions taken..."></textarea>
+                                </div>
+
+                                <div class="form-section">
+                                    <h5>Corrective Actions</h5>
+                                    <textarea class="form-control" rows="3" placeholder="Actions taken to address the issue and prevent recurrence..."></textarea>
+                                </div>
+
+                                <div class="report-actions">
+                                    <button class="btn btn--primary">Submit Report</button>
+                                    <button class="btn btn--secondary">Save Draft</button>
+                                    <button class="btn btn--outline">Review Guidelines</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- System Integration Tab -->
+        <div class="tab-content" id="system-integration">
+            <div class="integration-dashboard">
+                <!-- Hospital System Integration -->
+                <div class="medical-panel integration-panel">
+                    <div class="panel-header">
+                        <h3><span class="panel-icon">🔗</span>Hospital Information System Integration</h3>
+                        <div class="integration-status">
+                            <span class="status-badge connected">All Systems Connected</span>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="integration-grid">
+                            <div class="system-integration active">
+                                <div class="system-header">
+                                    <div class="system-icon">🏥</div>
+                                    <div class="system-info">
+                                        <div class="system-name">Epic EMR</div>
+                                        <div class="system-type">Electronic Medical Records</div>
+                                    </div>
+                                    <div class="connection-status connected">Connected</div>
+                                </div>
+                                <div class="integration-details">
+                                    <div class="detail-item">
+                                        <span class="label">FHIR R4 Interface:</span>
+                                        <span class="value">Active</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Patient Records Sync:</span>
+                                        <span class="value">Real-time</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Last Sync:</span>
+                                        <span class="value">2025-09-02 12:00:15</span>
+                                    </div>
+                                </div>
+                                <div class="integration-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">156</span>
+                                        <span class="metric-label">Records Synced Today</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">99.9%</span>
+                                        <span class="metric-label">Uptime</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="system-integration active">
+                                <div class="system-header">
+                                    <div class="system-icon">🚨</div>
+                                    <div class="system-info">
+                                        <div class="system-name">ProQA Dispatch</div>
+                                        <div class="system-type">Emergency Medical Dispatch</div>
+                                    </div>
+                                    <div class="connection-status connected">Connected</div>
+                                </div>
+                                <div class="integration-details">
+                                    <div class="detail-item">
+                                        <span class="label">CAD Integration:</span>
+                                        <span class="value">Active</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Protocol Sync:</span>
+                                        <span class="value">Automated</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Response Queue:</span>
+                                        <span class="value">3 Active Calls</span>
+                                    </div>
+                                </div>
+                                <div class="integration-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">24</span>
+                                        <span class="metric-label">Calls Today</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">2.3s</span>
+                                        <span class="metric-label">Avg Response Time</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="system-integration active">
+                                <div class="system-header">
+                                    <div class="system-icon">💊</div>
+                                    <div class="system-info">
+                                        <div class="system-name">Omnicell</div>
+                                        <div class="system-type">Medication Management</div>
+                                    </div>
+                                    <div class="connection-status connected">Connected</div>
+                                </div>
+                                <div class="integration-details">
+                                    <div class="detail-item">
+                                        <span class="label">Inventory Sync:</span>
+                                        <span class="value">Real-time</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Controlled Substances:</span>
+                                        <span class="value">DEA Compliant</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Expiration Tracking:</span>
+                                        <span class="value">Automated</span>
+                                    </div>
+                                </div>
+                                <div class="integration-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">98%</span>
+                                        <span class="metric-label">Stock Level</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">0</span>
+                                        <span class="metric-label">Expired Items</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="system-integration active">
+                                <div class="system-header">
+                                    <div class="system-icon">🧪</div>
+                                    <div class="system-info">
+                                        <div class="system-name">Cerner Laboratory</div>
+                                        <div class="system-type">Laboratory Information System</div>
+                                    </div>
+                                    <div class="connection-status connected">Connected</div>
+                                </div>
+                                <div class="integration-details">
+                                    <div class="detail-item">
+                                        <span class="label">HL7 Interface:</span>
+                                        <span class="value">Active</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Critical Results:</span>
+                                        <span class="value">Auto-Alert</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">POCT Integration:</span>
+                                        <span class="value">Enabled</span>
+                                    </div>
+                                </div>
+                                <div class="integration-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">47</span>
+                                        <span class="metric-label">Results Today</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">12min</span>
+                                        <span class="metric-label">Avg Turnaround</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="system-integration warning">
+                                <div class="system-header">
+                                    <div class="system-icon">💰</div>
+                                    <div class="system-info">
+                                        <div class="system-name">Epic Revenue Cycle</div>
+                                        <div class="system-type">Billing & Insurance</div>
+                                    </div>
+                                    <div class="connection-status maintenance">Maintenance</div>
+                                </div>
+                                <div class="integration-details">
+                                    <div class="detail-item">
+                                        <span class="label">Billing Interface:</span>
+                                        <span class="value">Scheduled Maintenance</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Insurance Verification:</span>
+                                        <span class="value">Queued</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Expected Recovery:</span>
+                                        <span class="value">14:30 EST</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="system-integration active">
+                                <div class="system-header">
+                                    <div class="system-icon">📊</div>
+                                    <div class="system-info">
+                                        <div class="system-name">FL-EMSTARS</div>
+                                        <div class="system-type">State EMS Reporting</div>
+                                    </div>
+                                    <div class="connection-status connected">Connected</div>
+                                </div>
+                                <div class="integration-details">
+                                    <div class="detail-item">
+                                        <span class="label">NEMSIS v3.5:</span>
+                                        <span class="value">Compliant</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Auto Reporting:</span>
+                                        <span class="value">Enabled</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Last Report:</span>
+                                        <span class="value">2025-09-02 06:00</span>
+                                    </div>
+                                </div>
+                                <div class="integration-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">100%</span>
+                                        <span class="metric-label">Compliance Rate</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">24</span>
+                                        <span class="metric-label">Reports Submitted</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Flow Monitoring -->
+                <div class="medical-panel dataflow-panel">
+                    <div class="panel-header">
+                        <h3><span class="panel-icon">🔄</span>Real-Time Data Flow Monitoring</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="dataflow-visualization">
+                            <div class="dataflow-chart">
+                                <canvas id="dataFlowChart" width="600" height="300"></canvas>
+                            </div>
+                            <div class="dataflow-metrics">
+                                <div class="flow-metric">
+                                    <div class="metric-header">
+                                        <span class="metric-label">Patient Records</span>
+                                        <span class="metric-status active">Active</span>
+                                    </div>
+                                    <div class="metric-value">1,247 MB/hr</div>
+                                    <div class="metric-trend">↑ 12% from yesterday</div>
+                                </div>
+                                <div class="flow-metric">
+                                    <div class="metric-header">
+                                        <span class="metric-label">Emergency Dispatch</span>
+                                        <span class="metric-status active">Active</span>
+                                    </div>
+                                    <div class="metric-value">89 messages/hr</div>
+                                    <div class="metric-trend">→ Normal volume</div>
+                                </div>
+                                <div class="flow-metric">
+                                    <div class="metric-header">
+                                        <span class="metric-label">Lab Results</span>
+                                        <span class="metric-status active">Active</span>
+                                    </div>
+                                    <div class="metric-value">156 results/day</div>
+                                    <div class="metric-trend">↑ 8% from average</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Professional Status Bar -->
+    <footer class="medical-footer">
+        <div class="footer-content">
+            <div class="system-status">
+                <div class="status-group">
+                    <span class="status-item">
+                        <span class="status-label">System Status:</span>
+                        <span class="status-value operational">Operational</span>
+                    </span>
+                    <span class="status-item">
+                        <span class="status-label">Last Sync:</span>
+                        <span class="status-value" id="lastSync">12:00:15</span>
+                    </span>
+                    <span class="status-item">
+                        <span class="status-label">Active Incidents:</span>
+                        <span class="status-value" id="activeIncidents">3</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="compliance-indicators">
+                <div class="indicator hipaa">
+                    <span class="indicator-icon">🔒</span>
+                    <span class="indicator-text">HIPAA Secure</span>
+                </div>
+                <div class="indicator fda">
+                    <span class="indicator-icon">✓</span>
+                    <span class="indicator-text">FDA Cleared</span>
+                </div>
+                <div class="indicator emergency">
+                    <span class="indicator-icon">🚨</span>
+                    <span class="indicator-text">Emergency Ready</span>
+                </div>
+            </div>
+
+            <div class="medical-info">
+                <span class="medical-director">Medical Director: Dr. James Martinez, MD</span>
+                <span class="system-version">MedEvac Pro™ v2.1.4</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Emergency Modal -->
+    <div class="modal hidden" id="emergencyModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content emergency-modal">
+            <div class="modal-header">
+                <h3>Emergency Medical Protocol</h3>
+                <button class="modal-close" id="closeEmergencyModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="emergency-protocols">
+                    <div class="protocol-option" data-protocol="code-blue">
+                        <div class="protocol-icon">🫀</div>
+                        <div class="protocol-info">
+                            <h4>Code Blue - Cardiac Arrest</h4>
+                            <p>Initiate ACLS protocol with advanced airway management</p>
+                        </div>
+                    </div>
+                    <div class="protocol-option" data-protocol="trauma-alert">
+                        <div class="protocol-icon">🩸</div>
+                        <div class="protocol-info">
+                            <h4>Trauma Alert</h4>
+                            <p>Activate trauma team and prepare OR if necessary</p>
+                        </div>
+                    </div>
+                    <div class="protocol-option" data-protocol="medical-director">
+                        <div class="protocol-icon">👨‍⚕️</div>
+                        <div class="protocol-info">
+                            <h4>Medical Director Consultation</h4>
+                            <p>Direct line to attending physician for complex cases</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
